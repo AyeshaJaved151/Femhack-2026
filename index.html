@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Resume Maker Project/ batch 17 (ayesha javed)</title>
+  <title>Resume Maker Project/ batch 17 (Ayesha Javed)</title>
 
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" href="style.css">
+
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
 
@@ -13,7 +17,6 @@
 <div id="signupPage" class="container mt-5">
   <div class="card shadow">
     <h3>Signup</h3>
-
     <input id="sName" class="form-control mb-2" placeholder="Full Name">
     <input id="sEmail" class="form-control mb-2" placeholder="Email">
 
@@ -40,7 +43,6 @@
 <div id="loginPage" class="container mt-5 hidden">
   <div class="card shadow">
     <h3>Login</h3>
-
     <input id="lEmail" class="form-control mb-2" placeholder="Email">
 
     <div class="password-box mb-2">
@@ -53,21 +55,20 @@
   </div>
 </div>
 
-<!--  DASHBOARD  -->
+<!-- DASHBOARD -->
 <div id="dashboard" class="container mt-4 hidden">
   <div class="card shadow">
     <h3>Dashboard</h3>
-
     <button class="btn btn-success w-100 mb-2" onclick="showResumeForm()">Create Resume</button>
     <button class="btn btn-info w-100 mb-2" onclick="showResumes()">View My Resumes</button>
     <button class="btn btn-danger w-100 mb-2" onclick="logout()">Logout</button>
   </div>
 </div>
 
-<!--  RESUME FORM  -->
+<!-- RESUME FORM -->
 <div id="resumeForm" class="container mt-4 hidden">
   <div class="card shadow">
-    <h3>Create Resume</h3>
+    <h3 id="resumeFormTitle">Create Resume</h3>
 
     <input id="rName" class="form-control mb-2" placeholder="Full Name">
     <textarea id="rSummary" class="form-control mb-2" placeholder="Profile Summary"></textarea>
@@ -90,7 +91,11 @@
   </div>
 </div>
 
-<script src="app.js"></script>
+<!-- Scripts -->
 <script src="bootstrap.js"></script>
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
