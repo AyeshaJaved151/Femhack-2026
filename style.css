@@ -1,0 +1,197 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; 
+}
+
+:root {
+  --bg-main: #faf5ff;
+  --card-bg: rgba(255, 255, 255, 0.95); 
+  --text-main: #2e1065;
+  --border: #e9d5ff;
+
+  --primary: #c084fc;   
+  --secondary: #a78bfa; 
+}
+
+body {
+  background: linear-gradient(135deg, #471c74, #7e789e);
+  min-height: 100vh;
+  background-image: url('images/bg\ img.png'); 
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  max-width: 520px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.15);
+  
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.card > * {
+  position: relative; 
+  z-index: 1;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+input,
+textarea {
+  border-radius: 12px !important;
+  border: 1px solid var(--border);
+  padding: 12px 14px !important;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(192, 132, 252, 0.25);
+}
+
+/* Buttons */
+button {
+  border-radius: 12px !important;
+  padding: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--secondary);
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #8b5cf6;
+}
+
+.btn-success {
+  background: var(--primary);
+  border: none;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background: #a855f7;
+}
+
+.btn-info {
+  background: #d8b4fe;
+  color: #2e1065;
+  border: none;
+}
+
+.btn-info:hover {
+  background: #c084fc;
+  color: #fff;
+}
+
+.btn-danger {
+  background: #f3a6c8;
+  border: none;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #f871b8;
+}
+
+.btn-back {
+  background: #f5f3ff;
+  color: #4c1d95;
+  border: 1px solid var(--border);
+}
+
+.btn-back:hover {
+  background: #e9d5ff;
+}
+
+/* Password Eye */
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  padding-right: 45px !important;
+}
+
+.password-box .eye {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #7c3aed;
+  transition: 0.3s;
+}
+
+.password-box .eye:hover {
+  color: #5b21b6;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 25px 20px;
+    width: 90%;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 20px 15px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  input,
+  textarea {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+}
