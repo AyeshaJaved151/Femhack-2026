@@ -172,6 +172,8 @@ button {
   color: #5b21b6;
 }
 
+
+
 /* Responsive Styling */
 @media screen and (max-width: 768px) {
   .card {
@@ -190,6 +192,51 @@ button {
   }
 }
 
+/* Resume View Styling */
+
+.resume-view {
+  max-width: 900px;
+}
+
+.resume-head {
+  text-align: center;
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.resume-head h2 {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.resume-head p {
+  color: #333;
+  opacity: 0.9;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.resume-grid h5 {
+  color: #5b21b6;
+  font-weight: 600;
+}
+
+.resume-grid p {
+  color: #222;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media(max-width:768px){
+  .resume-grid{grid-template-columns:1fr;}
+}
+
+
 @media screen and (max-width: 480px) {
   .card {
     padding: 20px 15px;
@@ -205,4 +252,10 @@ button {
     font-size: 0.95rem;
   }
 }
+
+
+
+
+
+
 

@@ -2,38 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Resume Maker Project/ batch 17 (Ayesha Javed)</title>
+  <title>Resume Maker Project / Batch 17 (Ayesha Javed)</title>
 
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" href="style.css">
-
-  <!-- SweetAlert2 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
 
-<!-- SIGNUP  -->
+<!-- SIGNUP -->
 <div id="signupPage" class="container mt-5">
   <div class="card shadow">
     <h3>Signup</h3>
     <input id="sName" class="form-control mb-2" placeholder="Full Name">
     <input id="sEmail" class="form-control mb-2" placeholder="Email">
-
     <div class="password-box mb-2">
       <input id="sPass" type="password" class="form-control" placeholder="Password">
       <span class="eye" onclick="togglePassword('sPass', this)">👁</span>
     </div>
-
     <div class="password-box mb-2">
       <input id="sCPass" type="password" class="form-control" placeholder="Confirm Password">
       <span class="eye" onclick="togglePassword('sCPass', this)">👁</span>
     </div>
-
     <button class="btn btn-success w-100" onclick="signup()">Signup</button>
-
-    <p class="text-center mt-2">
-      Already have an account?
+    <p class="text-center mt-2">Already have an account?
       <a href="#" onclick="showLogin()">Login</a>
     </p>
   </div>
@@ -44,12 +36,10 @@
   <div class="card shadow">
     <h3>Login</h3>
     <input id="lEmail" class="form-control mb-2" placeholder="Email">
-
     <div class="password-box mb-2">
       <input id="lPass" type="password" class="form-control" placeholder="Password">
       <span class="eye" onclick="togglePassword('lPass', this)">👁</span>
     </div>
-
     <button class="btn btn-primary w-100 mb-2" onclick="login()">Login</button>
     <button class="btn btn-back w-100" onclick="showSignup()">Back</button>
   </div>
@@ -69,14 +59,12 @@
 <div id="resumeForm" class="container mt-4 hidden">
   <div class="card shadow">
     <h3 id="resumeFormTitle">Create Resume</h3>
-
     <input id="rName" class="form-control mb-2" placeholder="Full Name">
     <textarea id="rSummary" class="form-control mb-2" placeholder="Profile Summary"></textarea>
     <textarea id="rEducation" class="form-control mb-2" placeholder="Education"></textarea>
     <textarea id="rExperience" class="form-control mb-2" placeholder="Experience"></textarea>
     <input id="rSkills" class="form-control mb-2" placeholder="Skills">
     <input id="rLanguages" class="form-control mb-2" placeholder="Languages">
-
     <button class="btn btn-primary w-100 mb-2" onclick="saveResume()">Save Resume</button>
     <button class="btn btn-back w-100" onclick="showDashboard()">Back</button>
   </div>
@@ -85,17 +73,44 @@
 <!-- RESUME LIST -->
 <div id="resumeListPage" class="container mt-4 hidden">
   <div class="card shadow">
-    <h3>Welcome to Resume Maker Pro</h3>
+    <h3>My Resumes</h3>
     <div id="resumeList"></div>
     <button class="btn btn-back w-100 mt-2" onclick="showDashboard()">Back</button>
   </div>
 </div>
 
-<!-- Scripts -->
+<!-- RESUME VIEW -->
+<div id="resumeViewPage" class="container mt-4 hidden">
+  <div class="card shadow resume-view">
+    <div class="resume-head">
+      <h2 id="vName"></h2>
+      <p id="vSummary"></p>
+    </div>
+
+    <div class="resume-grid">
+      <div>
+        <h5>🎓 Education</h5>
+        <p id="vEducation"></p>
+
+        <h5 class="mt-3">🛠 Skills</h5>
+        <p id="vSkills"></p>
+      </div>
+
+      <div>
+        <h5>💼 Experience</h5>
+        <p id="vExperience"></p>
+
+        <h5 class="mt-3">🌐 Languages</h5>
+        <p id="vLanguages"></p>
+      </div>
+    </div>
+
+    <button class="btn btn-back w-100 mt-3" onclick="showResumes()">⬅ Back</button>
+  </div>
+</div>
+
 <script src="bootstrap.js"></script>
-<!-- SweetAlert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="app.js"></script>
-
 </body>
 </html>
